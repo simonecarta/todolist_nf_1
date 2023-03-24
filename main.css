@@ -9,6 +9,7 @@
 body {
     width: 100%;
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* APP  */
@@ -19,11 +20,12 @@ body {
     padding: 3% 5% ;
     text-align: center;
     margin: 30px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(231, 231, 231);
+    
+    background-color: rgba(165, 222, 255, 0.664);
+    border-radius: 30px;
 }
 
-/* HEADER - TITOLI - INPUT */
+/* HEADER - TITOLI */
 
 .header-list {
     width: 70%;
@@ -32,7 +34,6 @@ body {
     margin: auto;
     justify-content: space-between;
     margin-bottom: 6%;
-    
     line-height: 50px;
 }
 
@@ -40,6 +41,14 @@ body {
     width: 30%;
     text-decoration: none;
     color: gray;
+    transition: color 0.2s, border-bottom 0.08s, font-size 0.08s;
+}
+
+.header-text:hover {
+    font-size: 18px;
+    color: rgb(23, 23, 23);
+    border-bottom: 1px solid black;
+    
 }
 
 
@@ -53,10 +62,14 @@ body {
     
 }
 
-h2 {
+.mainTitle {
+    font-size: 32px;
     margin-bottom: 20px;
     text-align: left;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.22);
+    
 }
+
 
 .add-new-task {
     background-color: rgb(178, 200, 254);
@@ -101,11 +114,25 @@ h3 {
 
 /* TEMPLATE */
 
+ul {
+    width: 80%;
+    margin: auto;
+}
+
+
 .templateLi {
     display: none;
     list-style: none;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 70px 6px;
     
+    margin-bottom: 3%;
+    padding: 0px 70px 6px;
+    border-bottom: 1px solid black;
+    
+    font-size: 18px;
+}
+
+.templateLi:last-child {
+    border-bottom: 0;
 }
