@@ -9,14 +9,16 @@ $(document).ready(function () {
 
     // Today data 
     const todayDate  = new Date();
-    var actualDay = $("date-aggiorn");
+    var actualDay = $(".today-date");
 
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    let showTodayData = (days[todayDate.getDay()]+ ", " + todayDate.getDate()+ " " + months[todayDate.getMonth()]);
+    var todayDateString = showTodayData.toString();
+    //data insertion in DOM
+    actualDay.text(todayDateString)
 
-    let showTodayData = (days[todayDate.getDay()]+ " , " + todayDate.getDate()+ " " + months[todayDate.getMonth()]);
-
-    console.log(showTodayData);
 
     // Insert new toDo item in list with ENTER 
     campoInput.keyup(function(e){
