@@ -16,7 +16,8 @@ body {
 
 .app {
     width: 50%;
-    height: 70%;
+    min-height: 70%;
+    height: fit-content;
     padding: 3% 5% ;
     text-align: center;
     margin: 30px auto;
