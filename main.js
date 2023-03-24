@@ -1,11 +1,24 @@
 $(document).ready(function () {
     
+
     // Referenze 
     var campoInput = $(".inputField");
     var template = $(".templateLi");
     var list = $("ul");
+    var button = $(".add-new-task");
 
-    // Inserimento nuovo toDo in lista
+    // Today data 
+    const todayDate  = new Date();
+    var actualDay = $("date-aggiorn");
+
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    let showTodayData = (days[todayDate.getDay()]+ " , " + todayDate.getDate()+ " " + months[todayDate.getMonth()]);
+
+    console.log(showTodayData);
+
+    // Insert new toDo item in list with ENTER 
     campoInput.keyup(function(e){
         if(e.which == 13){
             // creazione nuova variabile todo text
@@ -25,9 +38,28 @@ $(document).ready(function () {
             }
         } 
     })
-    
+
+    // Insert new toDo item in list with ENTER
+    button.click(function(){
+
+        var text = campoInput.val().trim()
+
+        if (text !== "")
+        {
+        // creazione nuovo clone e add proprietà 
+        newElement = template.clone();
+        newElement.css("display", "flex")
+        // append alla lista
+        newElement.prepend(text);
+        list.prepend(newElement)
+        //pulizia campo input dopo inserimento
+        campoInput.val("");}})
+
     // Cancellazione elemento dalla lista
     $("body").on('click', '.del', function (){
         $(this).parent().remove();
     })
+
+    // today data
+
 }); // End doc ready function

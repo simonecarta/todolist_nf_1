@@ -15,22 +15,64 @@ body {
 
 .app {
     width: 50%;
-    height: 100vh;
+    height: 70%;
+    padding: 3% 5% ;
     text-align: center;
     margin: 30px auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(231, 231, 231);
 }
 
 /* HEADER - TITOLI - INPUT */
 
-header {
+.header-list {
+    width: 70%;
+    text-align: center;
     display: flex;
-    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 6%;
+    
+    line-height: 50px;
+}
+
+.header-text {
+    width: 30%;
+    text-decoration: none;
+    color: gray;
+}
+
+
+/* TODAY'S TASK E BUTTON ADD NEW TASK */
+
+.tod-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5%;
     
 }
 
 h2 {
     margin-bottom: 20px;
+    text-align: left;
+}
+
+.add-new-task {
+    background-color: rgb(178, 200, 254);
+    width: 25%;
+    height: 30px; 
+    color: rgb(0, 78, 214);
+    letter-spacing: 0.2px;
+    border-radius: 10px; 
+    border: 0; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.add-new-task:hover {
+    background-color: rgb(163, 185, 241);
+    color: rgb(9, 88, 225);
+    
 }
 
 h3 {
@@ -39,10 +81,20 @@ h3 {
 
 .inputField {
     height: 30px;
+    width: 100%;
+    border: none;
     line-height: 30px;
     padding: 20px;
     font-size: 16px;
     margin-bottom: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transition: box-shadow .4s;
+}
+
+
+.inputField:hover {
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 /* LISTA TO DO  */
